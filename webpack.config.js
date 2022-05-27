@@ -9,7 +9,7 @@ module.exports ={
         filename:"build.js"
     },
     resolve:{
-        extensions:[".js",".jsx"]
+        extensions:['.js','.jsx']
     },
     module:{
         rules:[
@@ -37,9 +37,9 @@ module.exports ={
     devServer:{
         historyApiFallback:true,
     },
-    puglins:[
+    plugins:[
         new HtmlWebpackPlugin({
-            template:"./plugin/index.html",
+            template:"./public/index.html",
             filename:"./index.html"
         })
     ]
