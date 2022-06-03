@@ -32,6 +32,10 @@ module.exports ={
                 use:["style-loader","css-loader","sass-loader"],
                 test:/.(css|sass|scss)$/,
             },
+            {
+                type:"asset",
+                test:/\.(svg|jpg|png)$/,
+            }
         ],
     },
     devServer:{

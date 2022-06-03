@@ -6,18 +6,20 @@ import NavbarComponent from './navbar';
 import DestinationComponent from "./destination";
 import CrewComponent from "./crew"
 import TechnologyComponent from "./technology";
+
+import "../scss/index.scss"
 const App =() =>{
 
     const URL = "https://raw.githubusercontent.com/Fernando0654/FEM_1_Tip_Calculator/main/data_fem_13.json";
     const getData = async () => {
-        const response = await fetch(url);
+        const response = await fetch(URL);
         const data = await response.json();
         return data;
     }
     const location = useLocation().pathname;
     const newClass = location.split('/')[1];
     return(
-        <div className={"menu"+ newClass}>
+        <div className={"main "+ newClass}>
             <NavbarComponent currentRoute={newClass}/>
             <Route path="/">
                 <HomeComponent/>            
